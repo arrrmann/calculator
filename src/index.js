@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Button from './components/Button';
-import First from './components/Image/First'
-import Second from './components/Image/Second'
+import {First, Second} from './components/images'
 
 
 
@@ -35,19 +34,14 @@ const App=()=>{
 
   return (
     <div className='calculator-grid'>
-      <First/>
-      <Second/>
+      <img src={First} alt='first' className='first'/>
+      <img src={Second} alt='second' className='second'/>
       <div className='output'>0</div>
     {data}
     </div>
   )
 }
 
-
-//rgba(223,195,240,255)
-//rgb(0, 43, 74)
-//rgb(117, 113, 204)
-//rgb(37, 178, 37)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(<App/>)
